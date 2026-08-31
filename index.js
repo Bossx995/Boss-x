@@ -1,13 +1,13 @@
 /**
  * Bossx Bot - A WhatsApp Bot
- * Copyright (c) 2024 Professor
+ * Copyright (c) 2024 Bikram
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
  * 
  * Credits:
  * - Baileys Library by @adiwajshing
- * - Pair Code implementation inspired by TechGod143 & DGXEON
+ * - Pair Code implementation inspired by BIKRAM143 & BOSSX
  */
 require('./settings')
 const { Boom } = require('@hapi/boom')
@@ -196,15 +196,15 @@ async function startXeonBotInc() {
         if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
             v = store.contacts[id] || {}
             if (!(v.name || v.subject)) v = XeonBotInc.groupMetadata(id) || {}
-            resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
+            resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@9123827995.Whatsapp.net', '')).getNumber('international'))
         })
-        else v = id === '0@s.whatsapp.net' ? {
+        else v = id === '@9123827995.Whatsapp.net' ? {
             id,
             name: 'WhatsApp'
         } : id === XeonBotInc.decodeJid(XeonBotInc.user.id) ?
             XeonBotInc.user :
             (store.contacts[id] || {})
-        return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
+        return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@9123827995.Whatsapp.net', '')).getNumber('international')
     }
 
     XeonBotInc.public = true
@@ -282,10 +282,10 @@ async function startXeonBotInc() {
             await delay(1999)
             console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'KNIGHT BOT'} ]`)}\n\n`))
             console.log(chalk.cyan(`< ================================================== >`))
-            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: MR UNIQUE HACKER`))
+            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: MR Bossbhai`))
             console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
             console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: MR UNIQUE HACKER`))
+            console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: Mr Bossbhai`))
             console.log(chalk.green(`${global.themeemoji || '•'} 🤖 Bot Connected Successfully! ✅`))
             console.log(chalk.blue(`Bot Version: ${settings.version}`))
         }
